@@ -44,7 +44,7 @@ function MovieInfo({ movie, setModalOpen, DownloadVideo, progress }) {
                             </div>
 
                             {/* Description */}
-                            <p className="text-text text-sm leading-7">
+                            <p className="text-text text-sm leading-7 text-justify">
                                 {movie?.desc}
                             </p>
 
