@@ -32,7 +32,7 @@ export const createCategoryAction = (title) => async (dispatch, getState) => {
             tokenProtection(getState)
         );
         dispatch({ type: categoriesConstants.CREATE_CATEGORY_SUCCESS });
-        toast.success("Danh mục được tạo thành công");
+        toast.success("Danh mục được tạo thành công!");
         dispatch(getAllCategoriesAction());
     } catch (error) {
         ErrorsAction(error.dispatch, categoriesConstants.CREATE_CATEGORY_FAIL);
@@ -52,7 +52,7 @@ export const updateCategoryAction =
                 tokenProtection(getState)
             );
             dispatch({ type: categoriesConstants.UPDATE_CATEGORY_SUCCESS });
-            toast.success("Danh mục được cập nhật thành công");
+            toast.success("Danh mục được cập nhật thành công!");
             dispatch(getAllCategoriesAction());
         } catch (error) {
             ErrorsAction(
@@ -71,7 +71,7 @@ export const deleteCategoryAction = (id) => async (dispatch, getState) => {
             tokenProtection(getState)
         );
         dispatch({ type: categoriesConstants.DELETE_CATEGORY_SUCCESS });
-        toast.success("Đã xóa danh mục thành công");
+        toast.success("Đã xóa danh mục thành công!");
         dispatch(getAllCategoriesAction());
     } catch (error) {
         ErrorsAction(error, dispatch, categoriesConstants.DELETE_CATEGORY_FAIL);

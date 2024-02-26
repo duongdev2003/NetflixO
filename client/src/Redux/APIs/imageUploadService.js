@@ -6,11 +6,11 @@ const uploadImageService = async (file, setLoading) => {
         setLoading(true);
         const { data } = await Axios.post("/upload", file);
         setLoading(false);
-        toast.success("Tải tài liệu thành công");
+        toast.success("Dữ liệu được tải lên thành công!");
         return data;
     } catch (error) {
         setLoading(false);
-        toast.error("Đã xảy ra lỗi khi tải lên");
+        toast.error("Đã xảy ra lỗi khi tải lên!");
     }
 };
 

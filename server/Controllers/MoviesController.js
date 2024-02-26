@@ -70,7 +70,7 @@ const getMovieById = asyncHandler(async (req, res) => {
         // If the movie is not found send 404 error
         else {
             res.status(404);
-            throw new Error("Không tìm thấy phim");
+            throw new Error("Không tìm thấy phim!");
         }
     } catch (error) {
         res.status(400).json({ message: error.message });
@@ -122,7 +122,7 @@ const createMovieReview = asyncHandler(async (req, res) => {
             // If the user already reviewed this movie send 400 error
             if (alreadyReviewed) {
                 res.status(400);
-                throw new Error("Bạn đã đánh giá bộ phim này");
+                throw new Error("Bạn đã đánh giá bộ phim này!");
             }
             // Else create a new review
             const review = {
@@ -146,11 +146,11 @@ const createMovieReview = asyncHandler(async (req, res) => {
             await movie.save();
             // Send the new movie to the client
             res.status(201).json({
-                message: "Đã thêm đánh giá",
+                message: "Đã thêm đánh giá!",
             });
         } else {
             res.status(404);
-            throw new Error("Không tìm thấy phim");
+            throw new Error("Không tìm thấy phim!");
         }
     } catch (error) {
         res.status(400).json({ message: error.message });
@@ -203,7 +203,7 @@ const updateMovie = asyncHandler(async (req, res) => {
             res.status(201).json(updatedMovie);
         } else {
             res.status(404);
-            throw new Error("Không tìm thấy phim");
+            throw new Error("Không tìm thấy phim!");
         }
     } catch (error) {
         res.status(400).json({ message: error.message });
@@ -220,12 +220,12 @@ const deleteMovie = asyncHandler(async (req, res) => {
         // If the movie is not found delete it
         if (movie) {
             await movie.deleteOne();
-            res.json({ message: "Đã xóa phim" });
+            res.json({ message: "Đã xóa phim!" });
         }
         // If the movie is not found send 404 error
         else {
             res.status(404);
-            throw new Error("Không tìm thấy phim");
+            throw new Error("Không tìm thấy phim!");
         }
     } catch (error) {
         res.status(400).json({ message: error.message });
@@ -239,7 +239,7 @@ const deleteAllMovies = asyncHandler(async (req, res) => {
     try {
         // Delete all movies
         await Movie.deleteMany({});
-        res.json({ message: "Tất cả phim đã bị xóa" });
+        res.json({ message: "Tất cả phim đã bị xóa!" });
     } catch (error) {
         res.status(400).json({ message: error.message });
     }
@@ -288,7 +288,7 @@ const createMovie = asyncHandler(async (req, res) => {
             res.status(201).json(createdMovie);
         } else {
             res.status(404);
-            throw new Error("Invalid movie data");
+            throw new Error("Dữ liệu phim không hợp lệ!");
         }
     } catch (error) {
         res.status(400).json({ message: error.message });

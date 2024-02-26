@@ -28,19 +28,19 @@ function Footer() {
             title: "Danh mục hàng đầu",
             links: [
                 {
-                    name: "Hành động",
+                    name: "Tiên Hiệp",
                     link: "#",
                 },
                 {
-                    name: "Lãng mạn",
+                    name: "Cổ Trang",
                     link: "#",
                 },
                 {
-                    name: "Kịch",
+                    name: "Kiếm Hiệp",
                     link: "#",
                 },
                 {
-                    name: "Lịch sử",
+                    name: "Huyền Huyễn",
                     link: "#",
                 },
             ],

@@ -29,8 +29,9 @@ function FavoritesMovies() {
 
     // Delete movies handler
     const deleteMoviesHandler = () => {
-        window.confirm("Bạn có chắc chắn muốn xóa tất cả danh sách phim yêu thích không?") &&
-            dispatch(deleteFavoriteMoviesAction());
+        window.confirm(
+            "Bạn có chắc chắn muốn xóa tất cả danh sách phim yêu thích không?"
+        ) && dispatch(deleteFavoriteMoviesAction());
     };
 
     // Download movie video

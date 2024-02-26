@@ -8,7 +8,7 @@ function MovieCasts({ movie }) {
     return (
         movie?.casts?.length > 0 && (
             <div className="my-12">
-                <Titles title="Diễn viên" Icon={FaUserFriends} />
+                <Titles title="Diễn Viên" Icon={FaUserFriends} />
                 <div className="mt-10">
                     <Swiper
                         autoplay={{

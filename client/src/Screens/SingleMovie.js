@@ -77,7 +77,7 @@ function SingleMovie() {
                         {RelatedMovies?.length > 0 && (
                             <div className="my-16">
                                 <Titles
-                                    title="Phim liên quan"
+                                    title="Có Thể Bạn Quan Tâm"
                                     Icon={BsCollectionFill}
                                 />
                                 <div className="grid sm:mt-10 mt-6 xl:grid-cols-4 2xl:grid-cols-5 lg:grid-cols-3 sm:grid-cols-2 gap-6">

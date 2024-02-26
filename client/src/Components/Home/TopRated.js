@@ -52,7 +52,7 @@ const SwiperTop = ({ nextEl, prevEl, movies }) => {
         >
             {movies?.map((movie, index) => (
                 <SwiperSlide key={index}>
-                    <div className="h-rate hovered bg-dry rounded overflow-hidden mx-auto mr-5 ml-5">
+                    <div className="h-rate hovered border-border border bg-dry rounded overflow-hidden mx-auto mr-5 ml-5">
                         <img
                             src={
                                 movie?.titleImage
@@ -63,7 +63,7 @@ const SwiperTop = ({ nextEl, prevEl, movies }) => {
                             className="w-full h-full object-cover rounded"
                         />
                         <div className="px-5 absolute w-full h-full top-0 left-0">
-                            <div className="hoveres rounded w-full h-full gap-6 text-center relative bg-black bg-opacity-70 top-0 left-0 right-0 bottom-0 border-border border">
+                            <div className="hoveres rounded w-full h-full gap-6 text-center relative bg-black bg-opacity-70">
                                 <button
                                     onClick={() =>
                                         LikeMovie(movie, dispatch, userInfo)
@@ -105,7 +105,7 @@ function TopRated({ movies, isLoading }) {
 
     return (
         <div className="my-16">
-            <Titles title="Phim xếp hạng hàng đầu" Icon={BsBookmarkStarFill} />
+            <Titles title="Phim Nổi Tiếng" Icon={BsBookmarkStarFill} />
             <div className="mt-10">
                 {isLoading ? (
                     <Loader />

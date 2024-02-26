@@ -13,7 +13,7 @@ const registerUser = asyncHandler(async (req, res) => {
         // Check if user exists
         if (userExists) {
             res.status(400);
-            throw new Error("Người dùng đã tồn tại");
+            throw new Error("Người dùng đã tồn tại!");
         }
         // Hash password
         const salt = await bcrypt.genSalt(10);
@@ -37,7 +37,7 @@ const registerUser = asyncHandler(async (req, res) => {
             });
         } else {
             res.status(400);
-            throw new Error("Dữ liệu người dùng không hợp lệ");
+            throw new Error("Dữ liệu người dùng không hợp lệ!");
         }
     } catch (error) {
         res.status(400).json({ message: error.message });
@@ -65,7 +65,7 @@ const loginUser = asyncHandler(async (req, res) => {
             // If user not found or password not match send error message
         } else {
             res.status(401);
-            throw new Error("Email hoặc mật khẩu không hợp lệ");
+            throw new Error("Email hoặc mật khẩu không hợp lệ!");
         }
     } catch (error) {
         res.status(400).json({ message: error.message });
@@ -99,7 +99,7 @@ const updateUserProfile = asyncHandler(async (req, res) => {
             });
         } else {
             res.status(404);
-            throw new Error("Không tìm thấy người dùng");
+            throw new Error("Không tìm thấy người dùng!");
         }
         // Else send error message
     } catch (error) {
@@ -119,16 +119,16 @@ const deleteUserProfile = asyncHandler(async (req, res) => {
             // If user is admin throw error message
             if (user.isAdmin) {
                 res.status(400);
-                throw new Error("Không thể xóa người dùng quản trị");
+                throw new Error("Không thể xóa người dùng quản trị!");
             }
             // Else delete user from DB
             await user.deleteOne();
-            res.json({ message: "Người dùng đã được xóa thành công" });
+            res.json({ message: "Người dùng đã được xóa thành công!" });
         }
         // Else send error message
         else {
             res.status(404);
-            throw new Error("Không tìm thấy người dùng");
+            throw new Error("Không tìm thấy người dùng!");
         }
     } catch (error) {
         res.status(400).json({ message: error.message });
@@ -150,12 +150,12 @@ const changeUserPassword = asyncHandler(async (req, res) => {
             const hashedPassword = await bcrypt.hash(newPassword, salt);
             user.password = hashedPassword;
             await user.save();
-            res.json({ message: "Mật khẩu đã được thay đổi" });
+            res.json({ message: "Mật khẩu đã được thay đổi!" });
         }
         // Else send error message
         else {
             res.status(401);
-            throw new Error("Mật khẩu cũ không hợp lệ");
+            throw new Error("Mật khẩu cũ không hợp lệ!");
         }
     } catch (error) {
         res.status(400).json({ message: error.message });
@@ -176,7 +176,7 @@ const getLikedMovies = asyncHandler(async (req, res) => {
         //Else send error massage
         else {
             res.status(404);
-            throw new Error("Không tìm thấy người dùng");
+            throw new Error("Không tìm thấy người dùng!");
         }
     } catch (error) {
         res.status(400).json({ message: error.message });
@@ -197,7 +197,7 @@ const addLikedMovies = asyncHandler(async (req, res) => {
             // If movie already liked send error message
             if (user.likedMovies.includes(movieId)) {
                 res.status(400);
-                throw new Error("Phim đã thích rồi");
+                throw new Error("Phim đã tồn tại trong danh sách yêu thích!");
             }
             // Else add movie to liked movies and save it in DB
             user.likedMovies.push(movieId);
@@ -207,7 +207,7 @@ const addLikedMovies = asyncHandler(async (req, res) => {
         // Else send error message
         else {
             res.status(404);
-            throw new Error("Không tìm thấy phim");
+            throw new Error("Không tìm thấy phim!");
         }
     } catch (error) {
         res.status(400).json({ message: error.message });
@@ -226,13 +226,13 @@ const deleteLikedMovies = asyncHandler(async (req, res) => {
             user.likedMovies = [];
             await user.save();
             res.json({
-                message: "Phim yêu thích của bạn đã được xóa thành công",
+                message: "Phim yêu thích của bạn đã được xóa thành công!",
             });
         }
         // Else send error message
         else {
             res.status(404);
-            throw new Error("Không tìm thấy người dùng");
+            throw new Error("Không tìm thấy người dùng!");
         }
     } catch (error) {
         res.status(400).json({ message: error.message });
@@ -265,16 +265,16 @@ const deleteUser = asyncHandler(async (req, res) => {
             // If user is admin throw error message
             if (user.isAdmin) {
                 res.status(400);
-                throw new Error("Không thể xóa người dùng quản trị");
+                throw new Error("Không thể xóa người dùng quản trị!");
             }
             // Else delete user from DB
             await user.deleteOne();
-            res.json({ message: "Người dùng đã xóa thành công" });
+            res.json({ message: "Người dùng đã xóa thành công!" });
         }
         // Else send error message
         else {
             res.status(404);
-            throw new Error({ message: "Không tìm thấy người dùng" });
+            throw new Error({ message: "Không tìm thấy người dùng!" });
         }
     } catch (error) {
         res.status(400).json({ message: error.message });

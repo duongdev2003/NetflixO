@@ -69,7 +69,7 @@ const updateProfileAction = (user) => async (dispatch, getState) => {
             type: userConstants.USER_UPDATE_PROFILE_SUCCESS,
             payload: response,
         });
-        toast.success("Hồ sơ được cập nhật thành công");
+        toast.success("Hồ sơ được cập nhật thành công!");
         dispatch({
             type: userConstants.USER_LOGIN_SUCCESS,
             payload: response,
@@ -85,7 +85,7 @@ const deleteProfileAction = () => async (dispatch, getState) => {
         dispatch({ type: userConstants.USER_DELETE_PROFILE_REQUEST });
         await userApi.deleteProfileService(tokenProtection(getState));
         dispatch({ type: userConstants.USER_DELETE_PROFILE_SUCCESS });
-        toast.success("Đã xóa hồ sơ thành công");
+        toast.success("Đã xóa hồ sơ thành công!");
         dispatch(logoutAction());
     } catch (error) {
         ErrorsAction(error, dispatch, userConstants.USER_DELETE_PROFILE_FAIL);
@@ -131,7 +131,7 @@ const deleteFavoriteMoviesAction = () => async (dispatch, getState) => {
         dispatch({ type: userConstants.DELETE_FAVORITE_MOVIES_REQUEST });
         await userApi.deleteFavoriteMovies(tokenProtection(getState));
         dispatch({ type: userConstants.DELETE_FAVORITE_MOVIES_SUCCESS });
-        toast.success("Đã xóa thành công mục yêu thích");
+        toast.success("Đã xóa thành công mục yêu thích!");
     } catch (error) {
         ErrorsAction(
             error,
@@ -163,7 +163,7 @@ const deleteUserAction = (id) => async (dispatch, getState) => {
         dispatch({ type: userConstants.DELETE_USER_REQUEST });
         await userApi.deleteUserService(id, tokenProtection(getState));
         dispatch({ type: userConstants.DELETE_USER_SUCCESS });
-        toast.success("Người dùng đã được xóa thành công");
+        toast.success("Người dùng đã được xóa thành công!");
     } catch (error) {
         ErrorsAction(error, dispatch, userConstants.DELETE_USER_FAIL);
     }
@@ -178,7 +178,7 @@ const likeMovieAction = (movieId) => async (dispatch, getState) => {
             tokenProtection(getState)
         );
         dispatch({ type: userConstants.LIKE_MOVIE_SUCCESS, payload: response });
-        toast.success("Đã thêm vào mục yêu thích của bạn");
+        toast.success("Đã thêm vào mục yêu thích của bạn!");
         dispatch(getFavoritesMoviesAction());
     } catch (error) {
         ErrorsAction(error, dispatch, userConstants.LIKE_MOVIE_FAIL);

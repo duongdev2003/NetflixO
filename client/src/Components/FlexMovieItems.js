@@ -1,8 +1,8 @@
-import React from "react"
-import {FaRegCalendarAlt} from "react-icons/fa";
-import {BiTime} from "react-icons/bi";
+import React from "react";
+import { FaRegCalendarAlt } from "react-icons/fa";
+import { BiTime } from "react-icons/bi";
 
-function FlexMovieItems({movie}) {
+function FlexMovieItems({ movie }) {
     return (
         <>
             <div className="flex items-center gap-2">
@@ -17,7 +17,7 @@ function FlexMovieItems({movie}) {
                 <span className="text-sm font-medium">{movie.time} Giờ</span>
             </div>
         </>
-    )
+    );
 }
 
 export default FlexMovieItems;

@@ -1,11 +1,11 @@
 import React from "react";
 import MainDrawer from "./MainDrawer";
-import {Link, NavLink} from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { IoClose } from "react-icons/io5";
-import {BsCollectionFill} from "react-icons/bs";
-import {HiOutlineUserGroup} from "react-icons/hi";
-import {BiPhoneCall} from "react-icons/bi";
-import {FaFacebook, FaMedium, FaTelegram, FaYoutube} from "react-icons/fa";
+import { BsCollectionFill } from "react-icons/bs";
+import { HiOutlineUserGroup } from "react-icons/hi";
+import { BiPhoneCall } from "react-icons/bi";
+import { FaFacebook, FaMedium, FaTelegram, FaYoutube } from "react-icons/fa";
 
 function MenuDrawer({ drawerOpen, toggleDrawer }) {
     const active = "bg-dry text-subMain";
@@ -17,17 +17,17 @@ function MenuDrawer({ drawerOpen, toggleDrawer }) {
 
     const Links = [
         {
-            name: "Movies",
+            name: "Phim",
             link: "/movies",
             icon: BsCollectionFill,
         },
         {
-            name: "About Us",
+            name: "Về chúng tôi",
             link: "/about-us",
             icon: HiOutlineUserGroup,
         },
         {
-            name: "Contact Us",
+            name: "Liên hệ với chúng tôi",
             link: "/contact-us",
             icon: BiPhoneCall,
         },

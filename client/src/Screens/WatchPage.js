@@ -110,7 +110,7 @@ function WatchPage() {
                                     <RiMovie2Line />
                                 </div>
                                 <p className="text-border text-sm">
-                                    Có vẻ như chúng ta không có phim nào...
+                                    Có vẻ như chúng ta không có phim nào.
                                 </p>
                             </div>
                         ) : (

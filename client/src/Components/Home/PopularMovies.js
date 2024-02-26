@@ -8,7 +8,7 @@ import { Empty } from "./../Notficaltions/Empty";
 function PopularMovies({ isLoading, movies }) {
     return (
         <div className="my-16">
-            <Titles title="Phim nổi tiếng" Icon={BsCollectionFill} />
+            <Titles title="Phim Hot" Icon={BsCollectionFill} />
             {isLoading ? (
                 <Loader />
             ) : movies?.length > 0 ? (

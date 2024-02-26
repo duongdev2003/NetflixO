@@ -92,7 +92,7 @@ export const reviewMovieAction =
                 type: moviesConstants.CREATE_REVIEW_SUCCESS,
                 payload: response,
             });
-            toast.success("Đã thêm đánh giá thành công");
+            toast.success("Đã thêm đánh giá thành công!");
             dispatch({ type: moviesConstants.CREATE_REVIEW_RESET });
             dispatch(getMovieByIdAction(id));
         } catch (error) {
@@ -112,7 +112,7 @@ export const deleteMovieAction = (id) => async (dispatch, getState) => {
             type: moviesConstants.DELETE_MOVIE_SUCCESS,
             payload: response,
         });
-        toast.success("Đã xóa phim thành công");
+        toast.success("Đã xóa phim thành công!");
         dispatch(getAllMoviesAction({}));
     } catch (error) {
         ErrorsAction(error, dispatch, moviesConstants.DELETE_MOVIE_FAIL);
@@ -130,7 +130,7 @@ export const deleteAllMoviesAction = () => async (dispatch, getState) => {
             type: moviesConstants.DELETE_ALL_MOVIES_SUCCESS,
             payload: response,
         });
-        toast.success("Tất cả các phim đã được xóa thành công");
+        toast.success("Tất cả các phim đã được xóa thành công!");
         dispatch(getAllMoviesAction({}));
     } catch (error) {
         ErrorsAction(error, dispatch, moviesConstants.DELETE_ALL_MOVIES_FAIL);
@@ -149,7 +149,7 @@ export const createMovieAction = (movie) => async (dispatch, getState) => {
             type: moviesConstants.CREATE_MOVIE_SUCCESS,
             payload: response,
         });
-        toast.success("Phim được thêm mới thành công");
+        toast.success("Phim được thêm mới thành công!");
         dispatch(deleteAllCastAction());
     } catch (error) {
         ErrorsAction(error, dispatch, moviesConstants.CREATE_MOVIE_FAIL);
@@ -194,7 +194,7 @@ export const updateMovieAction = (id, movie) => async (dispatch, getState) => {
             type: moviesConstants.UPDATE_MOVIE_SUCCESS,
             payload: response,
         });
-        toast.success("Cập nhật phim thành công");
+        toast.success("Cập nhật phim thành công!");
         dispatch(getMovieByIdAction(id));
         dispatch(deleteAllCastAction());
     } catch (error) {

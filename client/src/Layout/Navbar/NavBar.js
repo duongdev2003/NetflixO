@@ -46,13 +46,13 @@ function NavBar() {
                         >
                             <button
                                 type="submit"
-                                className="bg-subMain w-12 flex-colo h-12 rounded text-white"
+                                className="bg-subMain w-12 flex-colo h-12 rounded-l text-white"
                             >
-                                <FaSearch />
+                                <FaSearch className="hover:scale-125 transitions" />
                             </button>
                             <input
                                 className="font-medium placeholder:text-border text-sm w-11/12 h-12 bg-transparent border-none px-2 text-black"
-                                placeholder="Tìm kiếm phim..."
+                                placeholder="Tìm kiếm..."
                                 type="search"
                                 value={search}
                                 onChange={(e) => setSearch(e.target.value)}
@@ -89,7 +89,7 @@ function NavBar() {
                                             : "/images/user.png"
                                     }
                                     alt={userInfo?.fullName}
-                                    className="w-8 h-8 rounded-full border object-cover border-subMain"
+                                    className="w-10 h-8 rounded-full border object-cover border-subMain"
                                 />
                             ) : (
                                 <CgUser className="w-8 h-8" />

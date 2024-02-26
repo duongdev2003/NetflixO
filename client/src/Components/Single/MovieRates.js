@@ -68,7 +68,7 @@ function MovieRates({ movie }) {
 
     return (
         <div className="my-12">
-            <Titles title="Đánh giá" Icon={BsBookmarkStarFill} />
+            <Titles title="Đánh Giá" Icon={BsBookmarkStarFill} />
             <div className="mt-10 xl:grid flex-colo grid-cols-5 gap-12 bg-dry xs:p-10 py-10 px-2 sm:p-20 rounded">
                 {/* Write Review */}
                 <form

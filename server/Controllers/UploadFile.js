@@ -39,7 +39,7 @@ Uploadrouter.post("/", upload.single("file"), async (req, res) => {
             blobStream.end(file.buffer);
             // When there is no file
         } else {
-            res.status(400).json({ message: "Vui lòng tải lên một tập tin" });
+            res.status(400).json({ message: "Vui lòng tải lên một tập tin!" });
         }
     } catch (error) {
         res.status(400).json({ message: error.message });

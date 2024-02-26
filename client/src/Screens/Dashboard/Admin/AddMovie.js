@@ -104,7 +104,7 @@ function AddMovie() {
                     <div className="w-full">
                         <Input
                             label="Tên phim"
-                            placeholder="Game Of Thrones"
+                            placeholder="Thế Giới Hoàn Mỹ"
                             type="text"
                             bg={true}
                             name="name"
@@ -117,7 +117,7 @@ function AddMovie() {
                     <div className="w-full">
                         <Input
                             label="Thời gian"
-                            placeholder="2 Giờ"
+                            placeholder="1 Giờ"
                             type="number"
                             bg={true}
                             name="time"
@@ -184,7 +184,7 @@ function AddMovie() {
                 <div className="w-full">
                     <Message
                         label="Mô tả phim"
-                        placeholder="Make it short and sweet"
+                        placeholder="Hãy viết một đoạn mô tả ngắn..."
                         name="desc"
                         register={{ ...register("desc") }}
                     />

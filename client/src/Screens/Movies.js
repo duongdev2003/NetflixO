@@ -96,11 +96,11 @@ function MoviesPage() {
             <div className="min-height-screen container mx-auto px-2 my-6">
                 <Filters data={datas} />
                 <p className="text-lg font-medium my-6">
-                    Tổng cộng{" "}
+                    Tổng có{" "}
                     <span className="font-bold text-subMain">
                         {movies ? movies?.length : 0}
                     </span>{" "}
-                    mục {search && `for "${search}"`}
+                    bộ phim {search && `được tìm thấy bằng từ khóa "${search}"`}
                 </p>
                 {isLoading ? (
                     <div className="w-full gap-6 flex-colo min-h-screen">
@@ -138,7 +138,7 @@ function MoviesPage() {
                             <RiMovie2Line />
                         </div>
                         <p className="text-border text-sm">
-                            Có vẻ như chúng ta không có phim nào...
+                            Có vẻ như chúng ta không có phim nào.
                         </p>
                     </div>
                 )}

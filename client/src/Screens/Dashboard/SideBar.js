@@ -49,7 +49,7 @@ function SideBar({ children }) {
                   icon: HiViewGridAdd,
               },
               {
-                  name: "Tài khoàn người dùng",
+                  name: "Tài khoản người dùng",
                   link: "/users",
                   icon: FaUsers,
               },

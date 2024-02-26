@@ -54,7 +54,7 @@ const updateCategory = asyncHandler(async (req, res) => {
             // Send the updated category to the client
             res.json(updatedCategory);
         } else {
-            res.status(404).json({ message: "Không tìm thấy danh mục" });
+            res.status(404).json({ message: "Không tìm thấy danh mục!" });
         }
     } catch (error) {
         res.status(400).json({ message: error.message });
@@ -72,9 +72,9 @@ const deleteCategory = asyncHandler(async (req, res) => {
             // Delete the category from database
             await category.deleteOne();
             // Send success message to the client
-            res.json({ message: "Đã xóa danh mục" });
+            res.json({ message: "Đã xóa danh mục!" });
         } else {
-            res.status(404).json({ message: "Không tim thấy danh muc" });
+            res.status(404).json({ message: "Không tìm thấy danh mục!" });
         }
     } catch (error) {
         res.status(400).json({ message: error.message });

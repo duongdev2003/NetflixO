@@ -14,12 +14,12 @@ function Movie({ movie }) {
 
     return (
         <>
-            <div className="border border-border  hover:scale-110 transitions relative rounded overflow-hidden">
+            <div className="border border-border relative rounded overflow-hidden">
                 <Link to={`/movie/${movie?._id}`} className="w-full">
                     <img
                         src={movie?.image ? movie?.image : "/images/user.png"}
                         alt={movie?.name}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover hover:scale-125 transitions"
                     />
                 </Link>
                 <div className="absolute flex-btn gap-2 bottom-0 right-0 left-0 bg-main bg-opacity-60 text-white px-4 py-3">
