@@ -29,7 +29,7 @@ const SwiperTop = ({ nextEl, prevEl, movies }) => {
             navigation={{ nextEl, prevEl }}
             autoplay={true}
             speed={1000}
-            // loop={true}
+            loop={true}
             modules={[Navigation, Autoplay]}
             breakpoints={{
                 0: {
@@ -52,7 +52,7 @@ const SwiperTop = ({ nextEl, prevEl, movies }) => {
         >
             {movies?.map((movie, index) => (
                 <SwiperSlide key={index}>
-                    <div className="p-4 h-rate hovered border border-border bg-dry rounded-lg overflow-hidden ml-5 mr-5">
+                    <div className="h-rate hovered bg-dry rounded overflow-hidden mx-auto mr-5 ml-5">
                         <img
                             src={
                                 movie?.titleImage
@@ -60,32 +60,34 @@ const SwiperTop = ({ nextEl, prevEl, movies }) => {
                                     : "/images/user.png"
                             }
                             alt={movie?.name}
-                            className="w-full h-full object-cover rounded-lg"
+                            className="w-full h-full object-cover rounded"
                         />
-                        <div className="px-4 hoveres gap-6 text-center absolute bg-black bg-opacity-70 top-0 left-0 right-0 bottom-0">
-                            <button
-                                onClick={() =>
-                                    LikeMovie(movie, dispatch, userInfo)
-                                }
-                                disabled={isLiked(movie) || isLoading}
-                                className={`w-12 h-12 flex-colo transitions hover:bg-subMain rounded-full
-                                ${
-                                    isLiked(movie)
-                                        ? "bg-subMain"
-                                        : "bg-white bg-opacity-30"
-                                }
-                                text-white`}
-                            >
-                                <FaHeart />
-                            </button>
-                            <Link
-                                to={`/movie/${movie?._id}`}
-                                className="font-semibold text-xl trancuted line-clamp-2"
-                            >
-                                {movie?.name}
-                            </Link>
-                            <div className="flex gap-2 text-star">
-                                <Rating value={movie?.rate} />
+                        <div className="px-5 absolute w-full h-full top-0 left-0">
+                            <div className="hoveres rounded w-full h-full gap-6 text-center relative bg-black bg-opacity-70 top-0 left-0 right-0 bottom-0 border-border border">
+                                <button
+                                    onClick={() =>
+                                        LikeMovie(movie, dispatch, userInfo)
+                                    }
+                                    disabled={isLiked(movie) || isLoading}
+                                    className={`w-12 h-12 flex-colo transitions hover:bg-subMain rounded-full
+                                    ${
+                                        isLiked(movie)
+                                            ? "bg-subMain"
+                                            : "bg-white bg-opacity-30"
+                                    }
+                                    text-white`}
+                                >
+                                    <FaHeart />
+                                </button>
+                                <Link
+                                    to={`/movie/${movie?._id}`}
+                                    className="font-semibold text-xl trancuted line-clamp-2"
+                                >
+                                    {movie?.name}
+                                </Link>
+                                <div className="flex gap-2 text-star">
+                                    <Rating value={movie?.rate} />
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -114,9 +116,7 @@ function TopRated({ movies, isLoading }) {
                         movies={movies}
                     />
                 ) : (
-                    <Empty
-                        message="Có vẻ như chúng ta không có phim nào."
-                    />
+                    <Empty message="Có vẻ như chúng ta không có phim nào." />
                 )}
                 <div className="w-full px-1 flex-rows gap-6 pt-12">
                     <button

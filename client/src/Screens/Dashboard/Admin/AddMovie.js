@@ -117,7 +117,7 @@ function AddMovie() {
                     <div className="w-full">
                         <Input
                             label="Thời gian"
-                            placeholder="2Hr"
+                            placeholder="2 Giờ"
                             type="number"
                             bg={true}
                             name="time"
@@ -133,7 +133,7 @@ function AddMovie() {
                     <div className="w-full">
                         <Input
                             label="Ngôn ngữ được sử dụng"
-                            placeholder="English"
+                            placeholder="Tiếng Anh"
                             type="text"
                             bg={true}
                             name="language"
