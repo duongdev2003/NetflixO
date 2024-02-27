@@ -1,54 +1,54 @@
 export const CategoriesData = [
     {
         _id: "1",
-        title: "Romantic",
+        title: "Tiên Hiệp",
     },
     {
         _id: "2",
-        title: "Action",
+        title: "Phim Chiếu Rạp",
     },
     {
         _id: "3",
-        title: "Horror",
+        title: "Huyền Huyễn",
     },
     {
         _id: "4",
-        title: "Comdy",
+        title: "Kiếm Hiệp",
     },
     {
         _id: "5",
-        title: "Adventure",
+        title: "Cổ Trang",
     },
     {
         _id: "6",
-        title: "Sports",
+        title: "Trùng Sinh",
     },
     {
         _id: "7",
-        title: "Fantasy",
+        title: "Xuyên Không",
     },
     {
         _id: "8",
-        title: "Musicals",
+        title: "Hài Hước",
     },
     {
         _id: "9",
-        title: "Drama",
+        title: "Khoa Học Viễn Tưởng",
     },
     {
         _id: "10",
-        title: "Thriller",
+        title: "Bí Ẩn",
     },
     {
         _id: "11",
-        title: "Western",
+        title: "Hành Động",
     },
     {
         _id: "12",
-        title: "Historical",
+        title: "Kinh Dị",
     },
     {
         _id: "13",
-        title: "Science",
+        title: "Lãng Mạn",
     },
 ];

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
-import { FaHeart, FaSearch } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
+import { GiHeartWings } from "react-icons/gi";
 import { CgUser } from "react-icons/cg";
 import { useSelector } from "react-redux";
 
@@ -99,8 +100,8 @@ function NavBar() {
                             to="/favorites"
                             className={`${Hover} relative`}
                         >
-                            <FaHeart className="w-7 h-7" />
-                            <div className="w-5 h-5 flex-colo rounded-full text-xs bg-subMain text-white absolute -top-5 -right-1">
+                            <GiHeartWings className="w-9 h-9" />
+                            <div className="w-4 h-4 flex-colo rounded-full text-xs bg-subMain text-white absolute -top-3 -right-1">
                                 {likedMovies?.length || 0}
                             </div>
                         </NavLink>

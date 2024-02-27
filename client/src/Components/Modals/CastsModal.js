@@ -84,7 +84,7 @@ function CastsModal({ modalOpen, setModalOpen, cast }) {
                     <div className="w-full">
                         <Input
                             label="Tên diễn viên"
-                            placeholder={cast ? cast.fullName : "John Doe"}
+                            placeholder={cast ? cast.fullName : "Triệu Nhật Dương"}
                             type="text"
                             name="name"
                             bg={false}
