@@ -68,7 +68,7 @@ function Profile() {
                 onSubmit={handleSubmit(onSubmit)}
                 className="flex flex-col gap-6"
             >
-                <h2 className="text-xl font-bold">Hồ sơ</h2>
+                <h2 className="text-xl font-bold">Hồ Sơ</h2>
                 <div className="w-full grid lg:grid-cols-12 gap-6">
                     <div className="col-span-10">
                         <Uploader setImageUrl={setImageUrl} />

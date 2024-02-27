@@ -66,7 +66,7 @@ function MovieList() {
         <SideBar>
             <div className="flex flex-col gap-6">
                 <div className="flex-btn gap-2">
-                    <h2 className="text-xl font-bold">Danh sách phim</h2>
+                    <h2 className="text-xl font-bold">Danh Sách Phim</h2>
                     {movies?.length > 0 && (
                         <button
                             disabled={allLoading}

@@ -22,49 +22,49 @@ function SideBar({ children }) {
         if (confirmed) {
             dispatch(logoutAction());
             navigate("/login");
-            toast.success("Đăng xuất thành công");
+            toast.success("Đăng xuất thành công!");
         }
     };
 
     const SideLinks = userInfo?.isAdmin
         ? [
               {
-                  name: "Bảng điều khiển",
+                  name: "Bảng Điều Khiển",
                   link: "/dashboard",
                   icon: BsFillGridFill,
               },
               {
-                  name: "Danh sách phim",
+                  name: "Danh Sách Phim",
                   link: "/movieslist",
                   icon: FaListAlt,
               },
               {
-                  name: "Thêm phim",
+                  name: "Thêm Phim",
                   link: "/addmovie",
                   icon: RiMovie2Fill,
               },
               {
-                  name: "Thể loại",
+                  name: "Thể Loại",
                   link: "/categories",
                   icon: HiViewGridAdd,
               },
               {
-                  name: "Tài khoản người dùng",
+                  name: "Tài Khoản Người Dùng",
                   link: "/users",
                   icon: FaUsers,
               },
               {
-                  name: "Hồ sơ",
+                  name: "Hồ Sơ",
                   link: "/profile",
                   icon: FiSettings,
               },
               {
-                  name: "Phim yêu thích",
+                  name: "Phim Yêu Thích",
                   link: "/favorites",
                   icon: FaHeart,
               },
               {
-                  name: "Đổi mật khẩu",
+                  name: "Đổi Mật Khẩu",
                   link: "/password",
                   icon: RiLockPasswordLine,
               },
@@ -72,17 +72,17 @@ function SideBar({ children }) {
         : userInfo
         ? [
               {
-                  name: "Hồ sơ",
+                  name: "Hồ Sơ",
                   link: "/profile",
                   icon: FiSettings,
               },
               {
-                  name: "Phim yêu thích",
+                  name: "Phim Yêu Thích",
                   link: "/favorites",
                   icon: FaHeart,
               },
               {
-                  name: "Đổi mật khẩu",
+                  name: "Đổi Mật Khẩu",
                   link: "/password",
                   icon: RiLockPasswordLine,
               },

@@ -99,7 +99,7 @@ function AddMovie() {
                 cast={cast}
             />
             <div className="flex flex-col gap-6">
-                <h2 className="text-xl font-bold"> Thêm phim </h2>
+                <h2 className="text-xl font-bold"> Thêm Phim </h2>
                 <div className="w-full grid md:grid-cols-2 gap-6">
                     <div className="w-full">
                         <Input

@@ -37,7 +37,7 @@ function Register() {
         if (userInfo?.isAdmin) {
             navigate("/dashboard");
         } else if (userInfo) {
-            navigate("/profile");
+            navigate("/login");
         }
         if (isSuccess) {
             toast.success(`Chào mừng ${userInfo?.fullName}`);

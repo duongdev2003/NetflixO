@@ -62,7 +62,7 @@ function FavoritesMovies() {
         <SideBar>
             <div className="flex flex-col gap-6">
                 <div className="flex-btn gap-2">
-                    <h2 className="text-xl font-bold">Phim yêu thích</h2>
+                    <h2 className="text-xl font-bold">Phim Yêu Thích</h2>
                     {likedMovies?.length > 0 && (
                         <button
                             disabled={deleteLoading}

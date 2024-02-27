@@ -50,7 +50,7 @@ function Password() {
             toast.success(message);
             reset();
         }
-    }, [isSuccess, isError, message, reset, dispatch]);
+    }, [isSuccess, isError, message, navigate, reset, dispatch]);
 
     return (
         <SideBar>
@@ -58,7 +58,7 @@ function Password() {
                 onSubmit={handleSubmit(onSubmit)}
                 className="flex flex-col gap-6"
             >
-                <h2 className="text-xl font-bold">Đổi mật khẩu</h2>
+                <h2 className="text-xl font-bold">Đổi Mật Khẩu</h2>
                 <div className="w-full">
                     <Input
                         label="Mật khẩu cũ"
