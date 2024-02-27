@@ -90,7 +90,7 @@ function NavBar() {
                                             : "/images/user.png"
                                     }
                                     alt={userInfo?.fullName}
-                                    className="w-10 h-8 rounded-full border object-cover border-subMain"
+                                    className="w-10 h-8 rounded-full object-cover"
                                 />
                             ) : (
                                 <CgUser className="w-8 h-8" />
