@@ -19,7 +19,7 @@ connectDB();
 
 // Main route
 app.get("/", (req, res) => {
-    res.send("API is running...");
+    res.send("API đang chạy...");
 });
 
 // Other route

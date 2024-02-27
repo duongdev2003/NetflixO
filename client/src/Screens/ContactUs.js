@@ -14,7 +14,7 @@ function ContactUs() {
         },
         {
             id: 2,
-            title: "Gọi cho chúng tôi",
+            title: "Liên hệ cho chúng tôi",
             info: "Phát triển các ý tưởng phụ trợ một cách tương tác cho các mô hình đa nền tảng.",
             icon: FiPhoneCall,
             contact: "+84 34.xxxx.100",
