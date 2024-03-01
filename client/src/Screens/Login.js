@@ -62,7 +62,7 @@ function Login() {
                     />
                     <div className="w-full">
                         <Input
-                            label="Email"
+                            label="Tên đăng nhập"
                             placeholder="netflixo@gmail.com"
                             type="email"
                             name="email"
