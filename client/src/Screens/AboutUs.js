@@ -30,12 +30,12 @@ function AboutUs() {
                                 </p>
                             </div>
                             <div className="grid md:grid-cols-2 gap-6 mt-8">
-                                <div className="p-8 bg-dry rounded-lg">
+                                <div className="p-8 bg-dry rounded-lg hover:scale-110 transitions">
                                     <span className="text-3xl block font-extrabold">
                                         50K +
                                     </span>
                                     <h4 className="text-lg font-semibold my-2">
-                                        Phim niêm yết
+                                        Phim phát hành
                                     </h4>
                                     <p className="mb-0 text-text leading-7 text-sm">
                                         Khám phá những viên ngọc điện ảnh trong
@@ -43,7 +43,7 @@ function AboutUs() {
                                         – một lối thoát ngắn ngủi đang chờ đợi.
                                     </p>
                                 </div>
-                                <div className="p-8 bg-dry rounded-lg">
+                                <div className="p-8 bg-dry rounded-lg hover:scale-110 transitions">
                                     <span className="text-3xl block font-extrabold">
                                         85K +
                                     </span>
@@ -62,7 +62,7 @@ function AboutUs() {
                             <img
                                 src="/images/about2.jpg"
                                 alt="aboutus"
-                                className="w-full xl:block hidden h-header rounded-lg object-cover"
+                                className="w-full xl:block hidden h-header rounded-lg object-cover hover:scale-110 transitions"
                             />
                         </div>
                     </div>

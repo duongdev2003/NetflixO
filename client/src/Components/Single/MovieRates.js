@@ -79,8 +79,8 @@ function MovieRates({ movie }) {
                         Đánh giá phim '{movie?.name}'
                     </h3>
                     <p className="text-sm leading-7 font-medium text-border">
-                        Viết bình luận cho bộ phim này. Nó sẽ được đăng trên
-                        trang này
+                        Viết bình luận cho bộ phim này. Bình luận sẽ được đăng
+                        trên trang này.
                     </p>
                     <div className="text-sm w-full">
                         <Select
@@ -141,7 +141,7 @@ function MovieRates({ movie }) {
                                     key={review?._id}
                                     className="md:grid flex flex-col w-full grid-cols-12 gap-6 bg-dry p-4 border border-gray-800 rounded-lg"
                                 >
-                                    <div className="col-span-2 bg-main hidden md:block rounded-lg">
+                                    <div className="col-span-2 bg-main hidden md:block rounded-xl w-3/4 h-3/4">
                                         <img
                                             src={
                                                 review?.userImage
@@ -149,12 +149,14 @@ function MovieRates({ movie }) {
                                                     : "images/user.png"
                                             }
                                             alt={review?.userName}
-                                            className="w-full h-full rounded-lg object-cover"
+                                            className="w-full h-full rounded-xl object-cover"
                                         />
                                     </div>
                                     <div className="col-span-7 flex flex-col gap-2">
-                                        <h2>{review?.userName}</h2>
-                                        <p className="text-xs leading-6 font-medium text-text">
+                                        <h2 className="text-subMain font-semibold">
+                                            {review?.userName}
+                                        </h2>
+                                        <p className="text-xs font-normal text-text">
                                             {review?.comment}
                                         </p>
                                     </div>

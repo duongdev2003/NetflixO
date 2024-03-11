@@ -88,7 +88,7 @@ function Footer() {
                                     >
                                         <Link
                                             to={text.link}
-                                            className="text-border inline-block w-full hover:text-subMain"
+                                            className="text-border inline-block w-full hover:text-subMain transitions"
                                         >
                                             {text.name}
                                         </Link>

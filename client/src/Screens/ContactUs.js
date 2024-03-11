@@ -36,7 +36,7 @@ function ContactUs() {
                     {ContactData.map((item) => (
                         <div
                             key={item.id}
-                            className="border border-border flex-colo p-10 bg-dry rounded-lg text-center"
+                            className="border border-border flex-colo p-10 bg-dry rounded-lg text-center hover:scale-110 transitions"
                         >
                             <span className="flex-colo w-20 h-20 mb-4 rounded-full bg-main text-subMain text-2xl">
                                 <item.icon />
