@@ -76,7 +76,7 @@ function MovieRates({ movie }) {
                     className="xl:col-span-2 w-full flex flex-col gap-8"
                 >
                     <h3 className="text-xl text-text font-semibold">
-                        Đánh giá '{movie?.name}'
+                        Đánh giá phim '{movie?.name}'
                     </h3>
                     <p className="text-sm leading-7 font-medium text-border">
                         Viết bình luận cho bộ phim này. Nó sẽ được đăng trên
@@ -132,7 +132,7 @@ function MovieRates({ movie }) {
                 {/* REVIEWS */}
                 <div className="col-span-3 flex w-full flex-col gap-6">
                     <h3 className="text-xl text-text font-semibold">
-                        Đánh giá ({movie?.numberOfReviews})
+                        Số lượt đánh giá ({movie?.numberOfReviews})
                     </h3>
                     <div className="w-full flex flex-col bg-main gap-6 rounded-lg md:p-12 p-6 h-header overflow-y-scroll">
                         {movie?.reviews?.length > 0 ? (
@@ -141,7 +141,7 @@ function MovieRates({ movie }) {
                                     key={review?._id}
                                     className="md:grid flex flex-col w-full grid-cols-12 gap-6 bg-dry p-4 border border-gray-800 rounded-lg"
                                 >
-                                    <div className="col-span-2 bg-main hidden md:block">
+                                    <div className="col-span-2 bg-main hidden md:block rounded-lg">
                                         <img
                                             src={
                                                 review?.userImage
@@ -166,7 +166,7 @@ function MovieRates({ movie }) {
                             ))
                         ) : (
                             <Empty
-                                message={`Hãy là người đầu tiên bình luận "${movie?.name}"`}
+                                message={`Hãy là người đầu tiên bình luận phim "${movie?.name}"`}
                             />
                         )}
                     </div>

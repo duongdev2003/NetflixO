@@ -53,7 +53,7 @@ function NavBar() {
                             </button>
                             <input
                                 className="font-medium placeholder:text-border text-sm w-11/12 h-12 bg-transparent border-none px-2 text-black"
-                                placeholder="Tìm kiếm..."
+                                placeholder="Tìm kiếm...!"
                                 type="search"
                                 value={search}
                                 onChange={(e) => setSearch(e.target.value)}
