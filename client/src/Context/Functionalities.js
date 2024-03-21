@@ -28,7 +28,6 @@ const LikeMovie = (movie, dispatch, userInfo) => {
 
 // Download video url
 const DownloadVideo = async (videoUrl, setProgress) => {
-    console.log(videoUrl);
     const { data } = await Axios({
         url: videoUrl,
         method: "GET",
@@ -54,11 +53,11 @@ const DownloadVideo = async (videoUrl, setProgress) => {
                     ),
                 });
             } else {
-                console.log(toast);
                 toast.dismiss("download");
             }
         },
     });
+    console.log(data);
     return data;
 };
 

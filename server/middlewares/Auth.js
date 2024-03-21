@@ -29,7 +29,7 @@ const protect = asyncHandler(async (req, res, next) => {
             console.error(error);
             res.status(401);
             throw new Error(
-                "Không được ủy quyền, mã thông báo không thành công"
+                "Không được ủy quyền, mã thông báo không thành công!"
             );
         }
     }

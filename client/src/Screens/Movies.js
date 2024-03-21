@@ -90,7 +90,7 @@ function MoviesPage() {
         year: year,
         setYear: setYear,
     };
-
+    
     return (
         <Layout>
             <div className="min-height-screen container mx-auto px-2 my-6">
